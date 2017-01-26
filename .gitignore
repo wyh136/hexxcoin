@@ -1,5 +1,5 @@
-zcoin-qt
+hexx-qt
 build/*
 !build/.gitkeep
-src/zcoind
+src/hexxd
 Makefile

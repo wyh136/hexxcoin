@@ -1628,7 +1628,7 @@ Value mintzerocoin(const Array& params, bool fHelp)
 
     if (fHelp || (params.size() > 1) || (params.size() < 1))
         throw runtime_error(
-            "mintzerocoin <amount>(1,10,25,50,100)\n"
+            "mintzerocoin <amount>(1,10,100,1000,10000)\n"
             + HelpRequiringPassphrase());
 
         int64 nAmount = 0;
@@ -1651,7 +1651,7 @@ Value mintzerocoin(const Array& params, bool fHelp)
             nAmount = AmountFromValue(params[0]);
         }else{
             throw runtime_error(
-                "mintzerocoin <amount>(1,10,25,50,100)\n");
+                "mintzerocoin <amount>(1,10,100,1000,10000)\n");
         }
 
 
@@ -1717,7 +1717,7 @@ Value spendzerocoin(const Array& params, bool fHelp)
 
     if (fHelp || (params.size() > 1) || (params.size() < 1))
         throw runtime_error(
-            "spendzerocoin <amount>(1,10,25,50,100)\n"
+            "spendzerocoin <amount>(1,10,100,1000,10000)\n"
             + HelpRequiringPassphrase());
 
 

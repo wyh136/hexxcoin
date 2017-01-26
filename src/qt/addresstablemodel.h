@@ -77,9 +77,9 @@ public:
 
     EditStatus getEditStatus() const { return editStatus; }
 
-    bool zerocoinMint(std::string &stringError, std::string denomAmount);
-    bool zerocoinSpend(std::string &stringError, std::string denomAmount);
-
+    int InputZeroCoinAmount(QWidget* parent);
+    bool zerocoinMint(QWidget* parent, std::string &stringError);
+    bool zerocoinSpend(QWidget* parent, std::string &stringError);
 
 private:
     WalletModel *walletModel;

@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About zcoin</source>
-        <translation>Tietoa zcoinista</translation>
+        <source>About Hexxcoin</source>
+        <translation>Tietoa Hexxcoinista</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;zcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;zcoin&lt;/b&gt; versio</translation>
+        <source>&lt;b&gt;Hexxcoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Hexxcoin&lt;/b&gt; versio</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -35,7 +35,7 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="+0"/>
-        <source>The zcoin developers</source>
+        <source>The Hexxcoin developers</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -68,8 +68,8 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your zcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Nämä ovat zcoin-osoitteesi joihin voit vastaanottaa maksuja. Voit haluta antaa jokaiselle maksajalle omansa, että pystyt seuraamaan keneltä maksut tulevat.</translation>
+        <source>These are your Hexxcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Nämä ovat Hexxcoin-osoitteesi joihin voit vastaanottaa maksuja. Voit haluta antaa jokaiselle maksajalle omansa, että pystyt seuraamaan keneltä maksut tulevat.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -83,8 +83,8 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a zcoin address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat zcoin-osoitteen</translation>
+        <source>Sign a message to prove you own a Hexxcoin address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat Hexxcoin-osoitteen</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -108,8 +108,8 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified zcoin address</source>
-        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä zcoin-osoitteella</translation>
+        <source>Verify a message to ensure it was signed with a specified Hexxcoin address</source>
+        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Hexxcoin-osoitteella</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -123,7 +123,7 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your zcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Hexxcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -249,7 +249,7 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR zcoinS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR HexxcoinS&lt;/b&gt;!</source>
         <translation>Varoitus: Jos salaat lompakkosi ja menetät tunnuslauseesi, &lt;b&gt;MENETÄT KAIKKI LITECOINISI&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -276,8 +276,8 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="-56"/>
-        <source>zcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your zcoins from being stolen by malware infecting your computer.</source>
-        <translation>zcoin sulkeutuu lopettaakseen salausprosessin. Muista, että salattukaan lompakko ei täysin suojaa sitä haittaohjelmien aiheuttamilta varkauksilta.</translation>
+        <source>Hexxcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Hexxcoins from being stolen by malware infecting your computer.</source>
+        <translation>Hexxcoin sulkeutuu lopettaakseen salausprosessin. Muista, että salattukaan lompakko ei täysin suojaa sitä haittaohjelmien aiheuttamilta varkauksilta.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -361,7 +361,7 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     <message>
         <location line="-14"/>
         <source>Show the list of addresses for receiving payments</source>
-        <translation>Näytä zcoinien vastaanottamiseen käytetyt osoitteet</translation>
+        <translation>Näytä Hexxcoinien vastaanottamiseen käytetyt osoitteet</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -375,8 +375,8 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about zcoin</source>
-        <translation>Näytä tietoa zcoin-projektista</translation>
+        <source>Show information about Hexxcoin</source>
+        <translation>Näytä tietoa Hexxcoin-projektista</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -420,13 +420,13 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a zcoin address</source>
-        <translation>Lähetä kolikoita zcoin-osoitteeseen</translation>
+        <source>Send coins to a Hexxcoin address</source>
+        <translation>Lähetä kolikoita Hexxcoin-osoitteeseen</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for zcoin</source>
-        <translation>Muuta zcoinin konfiguraatioasetuksia</translation>
+        <source>Modify configuration options for Hexxcoin</source>
+        <translation>Muuta Hexxcoinin konfiguraatioasetuksia</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -456,8 +456,8 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>zcoin</source>
-        <translation>zcoin</translation>
+        <source>Hexxcoin</source>
+        <translation>Hexxcoin</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -481,8 +481,8 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About zcoin</source>
-        <translation>&amp;Tietoa zcoinista</translation>
+        <source>&amp;About Hexxcoin</source>
+        <translation>&amp;Tietoa Hexxcoinista</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -492,7 +492,7 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     <message>
         <location line="+1"/>
         <source>Show or hide the main Window</source>
-        <translation>Näytä tai piilota zcoin-ikkuna</translation>
+        <translation>Näytä tai piilota Hexxcoin-ikkuna</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -501,13 +501,13 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your zcoin addresses to prove you own them</source>
-        <translation>Allekirjoita viestisi omalla zcoin -osoitteellasi todistaaksesi, että omistat ne</translation>
+        <source>Sign messages with your Hexxcoin addresses to prove you own them</source>
+        <translation>Allekirjoita viestisi omalla Hexxcoin -osoitteellasi todistaaksesi, että omistat ne</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified zcoin addresses</source>
-        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä zcoin -osoitteella</translation>
+        <source>Verify messages to ensure they were signed with specified Hexxcoin addresses</source>
+        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Hexxcoin -osoitteella</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -537,13 +537,13 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="+47"/>
-        <source>zcoin client</source>
-        <translation>zcoin-asiakas</translation>
+        <source>Hexxcoin client</source>
+        <translation>Hexxcoin-asiakas</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to zcoin network</source>
-        <translation><numerusform>%n aktiivinen yhteys zcoin-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä zcoin-verkkoon</numerusform></translation>
+        <source>%n active connection(s) to Hexxcoin network</source>
+        <translation><numerusform>%n aktiivinen yhteys Hexxcoin-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä Hexxcoin-verkkoon</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -656,8 +656,8 @@ Osoite: %4</translation>
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid zcoin address or malformed URI parameters.</source>
-        <translation>URIa ei voitu jäsentää! Tämä voi johtua kelvottomasta zcoin-osoitteesta tai virheellisistä URI parametreista.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Hexxcoin address or malformed URI parameters.</source>
+        <translation>URIa ei voitu jäsentää! Tämä voi johtua kelvottomasta Hexxcoin-osoitteesta tai virheellisistä URI parametreista.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -671,8 +671,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. zcoin can no longer continue safely and will quit.</source>
-        <translation>Peruuttamaton virhe on tapahtunut. zcoin ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
+        <source>A fatal error occurred. Hexxcoin can no longer continue safely and will quit.</source>
+        <translation>Peruuttamaton virhe on tapahtunut. Hexxcoin ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
     </message>
 </context>
 <context>
@@ -737,8 +737,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid zcoin address.</source>
-        <translation>Antamasi osoite &quot;%1&quot; ei ole validi zcoin-osoite.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Hexxcoin address.</source>
+        <translation>Antamasi osoite &quot;%1&quot; ei ole validi Hexxcoin-osoite.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -756,8 +756,8 @@ Osoite: %4</translation>
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>zcoin</source>
-        <translation>zcoin</translation>
+        <source>Hexxcoin</source>
+        <translation>Hexxcoin</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -819,13 +819,13 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start zcoin after logging in to the system.</source>
-        <translation>Käynnistä zcoin kirjautumisen yhteydessä.</translation>
+        <source>Automatically start Hexxcoin after logging in to the system.</source>
+        <translation>Käynnistä Hexxcoin kirjautumisen yhteydessä.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start zcoin on system login</source>
-        <translation>&amp;Käynnistä zcoin kirjautumisen yhteydessä</translation>
+        <source>&amp;Start Hexxcoin on system login</source>
+        <translation>&amp;Käynnistä Hexxcoin kirjautumisen yhteydessä</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -844,8 +844,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the zcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avaa zcoin-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
+        <source>Automatically open the Hexxcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avaa Hexxcoin-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -854,8 +854,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the zcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Ota yhteys zcoin-verkkoon SOCKS-proxyn läpi (esimerkiksi kun haluat käyttää Tor-verkkoa).</translation>
+        <source>Connect to the Hexxcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Ota yhteys Hexxcoin-verkkoon SOCKS-proxyn läpi (esimerkiksi kun haluat käyttää Tor-verkkoa).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -910,7 +910,7 @@ Osoite: %4</translation>
     <message>
         <location line="+7"/>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</source>
-        <translation>Ikkunaa suljettaessa vain pienentää zcoin-ohjelman ikkunan lopettamatta itse ohjelmaa. Kun tämä asetus on valittuna, ohjelman voi sulkea vain valitsemalla Lopeta ohjelman valikosta.</translation>
+        <translation>Ikkunaa suljettaessa vain pienentää Hexxcoin-ohjelman ikkunan lopettamatta itse ohjelmaa. Kun tämä asetus on valittuna, ohjelman voi sulkea vain valitsemalla Lopeta ohjelman valikosta.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -929,23 +929,23 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting zcoin.</source>
-        <translation>Tässä voit määritellä käyttöliittymän kielen. Muutokset astuvat voimaan seuraavan kerran, kun zcoin käynnistetään.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Hexxcoin.</source>
+        <translation>Tässä voit määritellä käyttöliittymän kielen. Muutokset astuvat voimaan seuraavan kerran, kun Hexxcoin käynnistetään.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>Yksikkö jona zcoin-määrät näytetään</translation>
+        <translation>Yksikkö jona Hexxcoin-määrät näytetään</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Valitse mitä yksikköä käytetään ensisijaisesti zcoin-määrien näyttämiseen.</translation>
+        <translation>Valitse mitä yksikköä käytetään ensisijaisesti Hexxcoin-määrien näyttämiseen.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show zcoin addresses in the transaction list or not.</source>
-        <translation>Näytetäänkö zcoin-osoitteet rahansiirrot listassa vai ei.</translation>
+        <source>Whether to show Hexxcoin addresses in the transaction list or not.</source>
+        <translation>Näytetäänkö Hexxcoin-osoitteet rahansiirrot listassa vai ei.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -996,8 +996,8 @@ Osoite: %4</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting zcoin.</source>
-        <translation>Tämä asetus astuu voimaan seuraavalla kerralla, kun zcoin käynnistetään.</translation>
+        <source>This setting will take effect after restarting Hexxcoin.</source>
+        <translation>Tämä asetus astuu voimaan seuraavalla kerralla, kun Hexxcoin käynnistetään.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1015,8 +1015,8 @@ Osoite: %4</translation>
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the zcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu zcoin-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Hexxcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Hexxcoin-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1051,12 +1051,12 @@ Osoite: %4</translation>
     <message>
         <location line="-101"/>
         <source>Your current balance</source>
-        <translation>Tililläsi tällä hetkellä olevien zcoinien määrä</translation>
+        <translation>Tililläsi tällä hetkellä olevien Hexxcoinien määrä</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
-        <translation>Niiden saapuvien rahansiirtojen määrä, joita zcoin-verkko ei vielä ole ehtinyt vahvistaa ja siten eivät vielä näy saldossa.</translation>
+        <translation>Niiden saapuvien rahansiirtojen määrä, joita Hexxcoin-verkko ei vielä ole ehtinyt vahvistaa ja siten eivät vielä näy saldossa.</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="+116"/>
@@ -1069,7 +1069,7 @@ Osoite: %4</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start zcoin: click-to-pay handler</source>
+        <source>Cannot start Hexxcoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1219,8 +1219,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the zcoin help message to get a list with possible zcoin command-line options.</source>
-        <translation>Näytä zcoin komentoriviparametrien ohjesivu, jossa on listattuna mahdolliset komentoriviparametrit.</translation>
+        <source>Show the Hexxcoin help message to get a list with possible Hexxcoin command-line options.</source>
+        <translation>Näytä Hexxcoin komentoriviparametrien ohjesivu, jossa on listattuna mahdolliset komentoriviparametrit.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1239,13 +1239,13 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>zcoin - Debug window</source>
-        <translation>zcoin - Debug ikkuna</translation>
+        <source>Hexxcoin - Debug window</source>
+        <translation>Hexxcoin - Debug ikkuna</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>zcoin Core</source>
-        <translation>zcoin-ydin</translation>
+        <source>Hexxcoin Core</source>
+        <translation>Hexxcoin-ydin</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1254,7 +1254,7 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the zcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Hexxcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation>Avaa lokitiedosto nykyisestä data-kansiosta. Tämä voi viedä useamman sekunnin, jos lokitiedosto on iso.</translation>
     </message>
     <message>
@@ -1264,8 +1264,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the zcoin RPC console.</source>
-        <translation>Tervetuloa zcoin RPC konsoliin.</translation>
+        <source>Welcome to the Hexxcoin RPC console.</source>
+        <translation>Tervetuloa Hexxcoin RPC konsoliin.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1290,7 +1290,7 @@ Osoite: %4</translation>
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>Lähetä zcoineja</translation>
+        <translation>Lähetä Hexxcoineja</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -1340,7 +1340,7 @@ Osoite: %4</translation>
     <message>
         <location line="+5"/>
         <source>Confirm send coins</source>
-        <translation>Hyväksy zcoinien lähettäminen</translation>
+        <translation>Hyväksy Hexxcoinien lähettäminen</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1360,7 +1360,7 @@ Osoite: %4</translation>
     <message>
         <location line="+5"/>
         <source>The amount to pay must be larger than 0.</source>
-        <translation>Maksettavan summan tulee olla suurempi kuin 0 zcoinia.</translation>
+        <translation>Maksettavan summan tulee olla suurempi kuin 0 Hexxcoinia.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1385,7 +1385,7 @@ Osoite: %4</translation>
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Virhe: Rahansiirto hylättiin.  Tämä voi tapahtua jos jotkin zcoineistasi on jo käytetty, esimerkiksi jos olet käyttänyt kopiota wallet.dat-lompakkotiedostosta ja zcoinit on merkitty käytetyksi vain kopiossa.</translation>
+        <translation>Virhe: Rahansiirto hylättiin.  Tämä voi tapahtua jos jotkin Hexxcoineistasi on jo käytetty, esimerkiksi jos olet käyttänyt kopiota wallet.dat-lompakkotiedostosta ja Hexxcoinit on merkitty käytetyksi vain kopiossa.</translation>
     </message>
 </context>
 <context>
@@ -1448,8 +1448,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a zcoin address (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</source>
-        <translation>Anna zcoin-osoite (esim. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</translation>
+        <source>Enter a Hexxcoin address (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</source>
+        <translation>Anna Hexxcoin-osoite (esim. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</translation>
     </message>
 </context>
 <context>
@@ -1513,8 +1513,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this zcoin address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän zcoin-osoitteen</translation>
+        <source>Sign the message to prove you own this Hexxcoin address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Hexxcoin-osoitteen</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1549,8 +1549,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified zcoin address</source>
-        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä zcoin-osoitteella</translation>
+        <source>Verify the message to ensure it was signed with the specified Hexxcoin address</source>
+        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Hexxcoin-osoitteella</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1565,8 +1565,8 @@ Osoite: %4</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a zcoin address (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</source>
-        <translation>Anna zcoin-osoite (esim. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</translation>
+        <source>Enter a Hexxcoin address (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</source>
+        <translation>Anna Hexxcoin-osoite (esim. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1575,8 +1575,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter zcoin signature</source>
-        <translation>Syötä zcoin-allekirjoitus</translation>
+        <source>Enter Hexxcoin signature</source>
+        <translation>Syötä Hexxcoin-allekirjoitus</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1649,7 +1649,7 @@ Osoite: %4</translation>
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The zcoin developers</source>
+        <source>The Hexxcoin developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1955,7 +1955,7 @@ Osoite: %4</translation>
     <message>
         <location line="+2"/>
         <source>Destination address of transaction.</source>
-        <translation>Rahansiirron kohteen zcoin-osoite</translation>
+        <translation>Rahansiirron kohteen Hexxcoin-osoite</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2137,7 +2137,7 @@ Osoite: %4</translation>
     <message>
         <location filename="../walletmodel.cpp" line="+193"/>
         <source>Send Coins</source>
-        <translation>Lähetä zcoineja</translation>
+        <translation>Lähetä Hexxcoineja</translation>
     </message>
 </context>
 <context>
@@ -2187,8 +2187,8 @@ Osoite: %4</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>zcoin version</source>
-        <translation>zcoinin versio</translation>
+        <source>Hexxcoin version</source>
+        <translation>Hexxcoinin versio</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2197,8 +2197,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or zcoind</source>
-        <translation>Lähetä käsky palvelimelle tai zcoind:lle</translation>
+        <source>Send command to -server or hexxd</source>
+        <translation>Lähetä käsky palvelimelle tai hexxd:lle</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2217,13 +2217,13 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: zcoin.conf)</source>
-        <translation>Määritä asetustiedosto (oletus: zcoin.conf)</translation>
+        <source>Specify configuration file (default: Hexxcoin.conf)</source>
+        <translation>Määritä asetustiedosto (oletus: Hexxcoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: zcoind.pid)</source>
-        <translation>Määritä pid-tiedosto (oletus: zcoin.pid)</translation>
+        <source>Specify pid file (default: hexxd.pid)</source>
+        <translation>Määritä pid-tiedosto (oletus: Hexxcoin.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2300,13 +2300,13 @@ Osoite: %4</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=zcoinrpc
+rpcuser=Hexxcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;zcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Hexxcoin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2322,7 +2322,7 @@ for example: alertnotify=echo %%s | mail -s &quot;zcoin Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. zcoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Hexxcoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2367,8 +2367,8 @@ for example: alertnotify=echo %%s | mail -s &quot;zcoin Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong zcoin will not work properly.</source>
-        <translation>Varoitus: Tarkista että tietokoneesi kellonaika ja päivämäärä ovat paikkansapitäviä! zcoin ei toimi oikein väärällä päivämäärällä ja/tai kellonajalla.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Hexxcoin will not work properly.</source>
+        <translation>Varoitus: Tarkista että tietokoneesi kellonaika ja päivämäärä ovat paikkansapitäviä! Hexxcoin ei toimi oikein väärällä päivämäärällä ja/tai kellonajalla.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2617,8 +2617,8 @@ for example: alertnotify=echo %%s | mail -s &quot;zcoin Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the zcoin Wiki for SSL setup instructions)</source>
-        <translation>SSL asetukset (katso zcoin Wikistä tarkemmat SSL ohjeet)</translation>
+        <source>SSL options: (see the Hexxcoin Wiki for SSL setup instructions)</source>
+        <translation>SSL asetukset (katso Hexxcoin Wikistä tarkemmat SSL ohjeet)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2808,13 +2808,13 @@ TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of zcoin</source>
-        <translation>Virhe ladattaessa wallet.dat-tiedostoa: Tarvitset uudemman version zcoinista</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Hexxcoin</source>
+        <translation>Virhe ladattaessa wallet.dat-tiedostoa: Tarvitset uudemman version Hexxcoinista</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart zcoin to complete</source>
-        <translation>Lompakko tarvitsee uudelleenkirjoittaa: käynnistä zcoin uudelleen</translation>
+        <source>Wallet needed to be rewritten: restart Hexxcoin to complete</source>
+        <translation>Lompakko tarvitsee uudelleenkirjoittaa: käynnistä Hexxcoin uudelleen</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2873,8 +2873,8 @@ TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</translation>
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. zcoin is probably already running.</source>
-        <translation>Kytkeytyminen %s ei onnistu tällä tietokoneella. zcoin on todennäköisesti jo ajamassa.</translation>
+        <source>Unable to bind to %s on this computer. Hexxcoin is probably already running.</source>
+        <translation>Kytkeytyminen %s ei onnistu tällä tietokoneella. Hexxcoin on todennäköisesti jo ajamassa.</translation>
     </message>
     <message>
         <location line="+64"/>

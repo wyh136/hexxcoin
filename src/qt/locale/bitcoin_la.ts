@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About zcoin</source>
-        <translation>Informatio de zcoin</translation>
+        <source>About Hexxcoin</source>
+        <translation>Informatio de Hexxcoin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;zcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;zcoin&lt;/b&gt; versio</translation>
+        <source>&lt;b&gt;Hexxcoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Hexxcoin&lt;/b&gt; versio</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -33,8 +33,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+0"/>
-        <source>The zcoin developers</source>
-        <translation>zcoin curatores</translation>
+        <source>The Hexxcoin developers</source>
+        <translation>Hexxcoin curatores</translation>
     </message>
 </context>
 <context>
@@ -66,8 +66,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your zcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Haec sunt inscriptiones zcoin tuae pro accipendo pensitationes.  Cupias variam ad quemque mittentem dare ut melius scias quem tibi pensare.</translation>
+        <source>These are your Hexxcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Haec sunt inscriptiones Hexxcoin tuae pro accipendo pensitationes.  Cupias variam ad quemque mittentem dare ut melius scias quem tibi pensare.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -81,8 +81,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a zcoin address</source>
-        <translation>Signa nuntium ut demonstres inscriptionem zcoin a te possessam esse</translation>
+        <source>Sign a message to prove you own a Hexxcoin address</source>
+        <translation>Signa nuntium ut demonstres inscriptionem Hexxcoin a te possessam esse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -106,8 +106,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified zcoin address</source>
-        <translation>Verifica nuntium ut cures signatum esse cum specificata inscriptione zcoin</translation>
+        <source>Verify a message to ensure it was signed with a specified Hexxcoin address</source>
+        <translation>Verifica nuntium ut cures signatum esse cum specificata inscriptione Hexxcoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -121,7 +121,7 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your zcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Hexxcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Hae sunt inscriptiones mittendi pensitationes.  Semper inspice quantitatem et inscriptionem accipiendi antequam nummos mittis.</translation>
     </message>
     <message>
@@ -247,7 +247,7 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR zcoinS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR HexxcoinS&lt;/b&gt;!</source>
         <translation>Monitio: Si cassidile tuum cifras et tesseram amittis, tu &lt;b&gt;AMITTES OMNES TUOS NUMMOS BITOS&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -274,8 +274,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="-56"/>
-        <source>zcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your zcoins from being stolen by malware infecting your computer.</source>
-        <translation>zcoin iam desinet ut finiat actionem cifrandi.  Memento cassidile cifrare non posse cuncte curare ne tui nummi clepantur ab malis programatibus in tuo computatro.</translation>
+        <source>Hexxcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Hexxcoins from being stolen by malware infecting your computer.</source>
+        <translation>Hexxcoin iam desinet ut finiat actionem cifrandi.  Memento cassidile cifrare non posse cuncte curare ne tui nummi clepantur ab malis programatibus in tuo computatro.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -373,8 +373,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about zcoin</source>
-        <translation>Monstra informationem de zcoin</translation>
+        <source>Show information about Hexxcoin</source>
+        <translation>Monstra informationem de Hexxcoin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -418,13 +418,13 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a zcoin address</source>
-        <translation>Mitte nummos ad inscriptionem zcoin</translation>
+        <source>Send coins to a Hexxcoin address</source>
+        <translation>Mitte nummos ad inscriptionem Hexxcoin</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for zcoin</source>
-        <translation>Muta configurationis optiones pro zcoin</translation>
+        <source>Modify configuration options for Hexxcoin</source>
+        <translation>Muta configurationis optiones pro Hexxcoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -454,8 +454,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>zcoin</source>
-        <translation>zcoin</translation>
+        <source>Hexxcoin</source>
+        <translation>Hexxcoin</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -479,8 +479,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About zcoin</source>
-        <translation>&amp;Informatio de zcoin</translation>
+        <source>&amp;About Hexxcoin</source>
+        <translation>&amp;Informatio de Hexxcoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -499,13 +499,13 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your zcoin addresses to prove you own them</source>
-        <translation>Signa nuntios cum tuis inscriptionibus zcoin ut demonstres te eas possidere</translation>
+        <source>Sign messages with your Hexxcoin addresses to prove you own them</source>
+        <translation>Signa nuntios cum tuis inscriptionibus Hexxcoin ut demonstres te eas possidere</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified zcoin addresses</source>
-        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus zcoin</translation>
+        <source>Verify messages to ensure they were signed with specified Hexxcoin addresses</source>
+        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus Hexxcoin</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -535,13 +535,13 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+47"/>
-        <source>zcoin client</source>
-        <translation>zcoin cliens</translation>
+        <source>Hexxcoin client</source>
+        <translation>Hexxcoin cliens</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to zcoin network</source>
-        <translation><numerusform>%n activa conexio ad rete zcoin</numerusform><numerusform>%n activae conexiones ad rete zcoin</numerusform></translation>
+        <source>%n active connection(s) to Hexxcoin network</source>
+        <translation><numerusform>%n activa conexio ad rete Hexxcoin</numerusform><numerusform>%n activae conexiones ad rete Hexxcoin</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -655,8 +655,8 @@ Inscriptio: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid zcoin address or malformed URI parameters.</source>
-        <translation>URI intellegi non posse!  Huius causa possit inscriptionem zcoin non validam aut URI parametra maleformata.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Hexxcoin address or malformed URI parameters.</source>
+        <translation>URI intellegi non posse!  Huius causa possit inscriptionem Hexxcoin non validam aut URI parametra maleformata.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -670,8 +670,8 @@ Inscriptio: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. zcoin can no longer continue safely and will quit.</source>
-        <translation>Error fatalis accidit.  zcoin nondum pergere tute potest, et exibit.</translation>
+        <source>A fatal error occurred. Hexxcoin can no longer continue safely and will quit.</source>
+        <translation>Error fatalis accidit.  Hexxcoin nondum pergere tute potest, et exibit.</translation>
     </message>
 </context>
 <context>
@@ -736,8 +736,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid zcoin address.</source>
-        <translation>Inscriptio inserta &quot;%1&quot; non valida inscriptio zcoin est.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Hexxcoin address.</source>
+        <translation>Inscriptio inserta &quot;%1&quot; non valida inscriptio Hexxcoin est.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -755,8 +755,8 @@ Inscriptio: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>zcoin</source>
-        <translation>zcoin</translation>
+        <source>Hexxcoin</source>
+        <translation>Hexxcoin</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -818,13 +818,13 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start zcoin after logging in to the system.</source>
-        <translation>Pelle zcoin per se postquam in systema inire.</translation>
+        <source>Automatically start Hexxcoin after logging in to the system.</source>
+        <translation>Pelle Hexxcoin per se postquam in systema inire.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start zcoin on system login</source>
-        <translation>&amp;Pelle zcoin cum inire systema</translation>
+        <source>&amp;Start Hexxcoin on system login</source>
+        <translation>&amp;Pelle Hexxcoin cum inire systema</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -843,8 +843,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the zcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Aperi per se portam clientis zcoin in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
+        <source>Automatically open the Hexxcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Aperi per se portam clientis Hexxcoin in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -853,8 +853,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the zcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Connecte ad rete zcoin per SOCKS vicarium (e.g. quando conectens per Tor).</translation>
+        <source>Connect to the Hexxcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Connecte ad rete Hexxcoin per SOCKS vicarium (e.g. quando conectens per Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -928,8 +928,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting zcoin.</source>
-        <translation>Lingua monstranda utenti hic constitui potest.  Haec configuratio effectiva erit postquam zcoin iterum initiatum erit.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Hexxcoin.</source>
+        <translation>Lingua monstranda utenti hic constitui potest.  Haec configuratio effectiva erit postquam Hexxcoin iterum initiatum erit.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -943,8 +943,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show zcoin addresses in the transaction list or not.</source>
-        <translation>Num monstrare inscriptiones zcoin in enumeratione transactionum.</translation>
+        <source>Whether to show Hexxcoin addresses in the transaction list or not.</source>
+        <translation>Num monstrare inscriptiones Hexxcoin in enumeratione transactionum.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -995,8 +995,8 @@ Inscriptio: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting zcoin.</source>
-        <translation>Haec configuratio effectiva erit postquam zcoin iterum initiatum erit.</translation>
+        <source>This setting will take effect after restarting Hexxcoin.</source>
+        <translation>Haec configuratio effectiva erit postquam Hexxcoin iterum initiatum erit.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1014,8 +1014,8 @@ Inscriptio: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the zcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete zcoin postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Hexxcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete Hexxcoin postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1068,8 +1068,8 @@ Inscriptio: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start zcoin: click-to-pay handler</source>
-        <translation>zcoin incipere non potest: cliccare-ad-pensandum handler</translation>
+        <source>Cannot start Hexxcoin: click-to-pay handler</source>
+        <translation>Hexxcoin incipere non potest: cliccare-ad-pensandum handler</translation>
     </message>
 </context>
 <context>
@@ -1218,8 +1218,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the zcoin help message to get a list with possible zcoin command-line options.</source>
-        <translation>Monstra nuntium auxilii zcoin ut videas enumerationem possibilium optionum zcoin mandati initiantis.</translation>
+        <source>Show the Hexxcoin help message to get a list with possible Hexxcoin command-line options.</source>
+        <translation>Monstra nuntium auxilii Hexxcoin ut videas enumerationem possibilium optionum Hexxcoin mandati initiantis.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1238,13 +1238,13 @@ Inscriptio: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>zcoin - Debug window</source>
-        <translation>zcoin - Fenestra debug</translation>
+        <source>Hexxcoin - Debug window</source>
+        <translation>Hexxcoin - Fenestra debug</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>zcoin Core</source>
-        <translation>zcoin Nucleus</translation>
+        <source>Hexxcoin Core</source>
+        <translation>Hexxcoin Nucleus</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1253,8 +1253,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the zcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Aperi plicam catalogi de zcoin debug ex activo indice datorum.  Hoc possit pauca secunda pro plicis magnis catalogi.</translation>
+        <source>Open the Hexxcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Aperi plicam catalogi de Hexxcoin debug ex activo indice datorum.  Hoc possit pauca secunda pro plicis magnis catalogi.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1263,8 +1263,8 @@ Inscriptio: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the zcoin RPC console.</source>
-        <translation>Bene ventio in terminale RPC de zcoin.</translation>
+        <source>Welcome to the Hexxcoin RPC console.</source>
+        <translation>Bene ventio in terminale RPC de Hexxcoin.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1447,8 +1447,8 @@ Inscriptio: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a zcoin address (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</source>
-        <translation>Insero inscriptionem zcoin (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</translation>
+        <source>Enter a Hexxcoin address (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</source>
+        <translation>Insero inscriptionem Hexxcoin (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</translation>
     </message>
 </context>
 <context>
@@ -1512,8 +1512,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this zcoin address</source>
-        <translation>Signa nuntium ut demonstres hanc inscriptionem zcoin a te possessa esse</translation>
+        <source>Sign the message to prove you own this Hexxcoin address</source>
+        <translation>Signa nuntium ut demonstres hanc inscriptionem Hexxcoin a te possessa esse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1548,8 +1548,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified zcoin address</source>
-        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione zcoin</translation>
+        <source>Verify the message to ensure it was signed with the specified Hexxcoin address</source>
+        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione Hexxcoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1564,8 +1564,8 @@ Inscriptio: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a zcoin address (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</source>
-        <translation>Insere inscriptionem zcoin (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</translation>
+        <source>Enter a Hexxcoin address (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</source>
+        <translation>Insere inscriptionem Hexxcoin (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1574,8 +1574,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter zcoin signature</source>
-        <translation>Insere signationem zcoin</translation>
+        <source>Enter Hexxcoin signature</source>
+        <translation>Insere signationem Hexxcoin</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1648,8 +1648,8 @@ Inscriptio: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The zcoin developers</source>
-        <translation>zcoin curatores</translation>
+        <source>The Hexxcoin developers</source>
+        <translation>Hexxcoin curatores</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2186,8 +2186,8 @@ Inscriptio: %4
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>zcoin version</source>
-        <translation>Versio de zcoin</translation>
+        <source>Hexxcoin version</source>
+        <translation>Versio de Hexxcoin</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2196,8 +2196,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or zcoind</source>
-        <translation>Mitte mandatum ad -server vel zcoind</translation>
+        <source>Send command to -server or hexxd</source>
+        <translation>Mitte mandatum ad -server vel hexxd</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2216,13 +2216,13 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: zcoin.conf)</source>
-        <translation>Specifica configurationis plicam (praedefinitum: zcoin.conf)</translation>
+        <source>Specify configuration file (default: Hexxcoin.conf)</source>
+        <translation>Specifica configurationis plicam (praedefinitum: Hexxcoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: zcoind.pid)</source>
-        <translation>Specifica pid plicam (praedefinitum: zcoin.pid)</translation>
+        <source>Specify pid file (default: hexxd.pid)</source>
+        <translation>Specifica pid plicam (praedefinitum: Hexxcoin.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2299,24 +2299,24 @@ Inscriptio: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=zcoinrpc
+rpcuser=Hexxcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;zcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Hexxcoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, necesse est te rpcpassword constituere in plica configurationis:
 %s
 Hortatur te hanc fortuitam tesseram uti:
-rpcuser=zcoinrpc
+rpcuser=Hexxcoinrpc
 rpcpassword=%s
 (non est necesse te hanc tesseram meminisse)
 Nomen usoris et tessera eadem esse NON POSSUNT.
 Si plica non existit, eam crea cum permissionibus ut eius dominus tantum sinitur id legere.
 Quoque hortatur alertnotify constituere ut tu notificetur de problematibus;
-exempli gratia: alertnotify=echo %%s | mail -s &quot;zcoin Notificatio&quot; admin@foo.com
+exempli gratia: alertnotify=echo %%s | mail -s &quot;Hexxcoin Notificatio&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2331,8 +2331,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;zcoin Notificatio&quot; adm
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. zcoin is probably already running.</source>
-        <translation>Non posse serare datorum indicem %s.  zcoin probabiliter iam operatur.</translation>
+        <source>Cannot obtain a lock on data directory %s. Hexxcoin is probably already running.</source>
+        <translation>Non posse serare datorum indicem %s.  Hexxcoin probabiliter iam operatur.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2376,8 +2376,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;zcoin Notificatio&quot; adm
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong zcoin will not work properly.</source>
-        <translation>Monitio: Sodes cura ut dies tempusque computatri tui recti sunt!  Si horologium tuum pravum est, zcoin non proprie fungetur.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Hexxcoin will not work properly.</source>
+        <translation>Monitio: Sodes cura ut dies tempusque computatri tui recti sunt!  Si horologium tuum pravum est, Hexxcoin non proprie fungetur.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2626,8 +2626,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;zcoin Notificatio&quot; adm
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the zcoin Wiki for SSL setup instructions)</source>
-        <translation>Optiones SSL: (vide vici de zcoin pro instructionibus SSL configurationis)</translation>
+        <source>SSL options: (see the Hexxcoin Wiki for SSL setup instructions)</source>
+        <translation>Optiones SSL: (vide vici de Hexxcoin pro instructionibus SSL configurationis)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2816,13 +2816,13 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;zcoin Notificatio&quot; adm
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of zcoin</source>
-        <translation>Error legendi wallet.dat: Cassidili necesse est recentior versio zcoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Hexxcoin</source>
+        <translation>Error legendi wallet.dat: Cassidili necesse est recentior versio Hexxcoin</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart zcoin to complete</source>
-        <translation>Cassidili necesse erat rescribi: Repelle zcoin ut compleas</translation>
+        <source>Wallet needed to be rewritten: restart Hexxcoin to complete</source>
+        <translation>Cassidili necesse erat rescribi: Repelle Hexxcoin ut compleas</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2881,8 +2881,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;zcoin Notificatio&quot; adm
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. zcoin is probably already running.</source>
-        <translation>Non posse conglutinare ad %s in hoc cumputatro.  zcoin probabiliter iam operatur.</translation>
+        <source>Unable to bind to %s on this computer. Hexxcoin is probably already running.</source>
+        <translation>Non posse conglutinare ad %s in hoc cumputatro.  Hexxcoin probabiliter iam operatur.</translation>
     </message>
     <message>
         <location line="+64"/>

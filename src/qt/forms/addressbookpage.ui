@@ -96,7 +96,7 @@
      <item>
       <widget class="QPushButton" name="signMessage">
        <property name="toolTip">
-        <string>Sign a message to prove you own a zcoin address</string>
+        <string>Sign a message to prove you own a Hexxcoin address</string>
        </property>
        <property name="text">
         <string>Sign &amp;Message</string>
@@ -110,7 +110,7 @@
      <item>
       <widget class="QPushButton" name="verifyMessage">
        <property name="toolTip">
-        <string>Verify a message to ensure it was signed with a specified zcoin address</string>
+        <string>Verify a message to ensure it was signed with a specified Hexxcoin address</string>
        </property>
        <property name="text">
         <string>&amp;Verify Message</string>
@@ -134,9 +134,6 @@
          <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
        </property>
       </widget>
-     </item>
-     <item>
-      <widget class="QComboBox" name="zerocoinAmount"/>
      </item>
      <item>
       <widget class="QPushButton" name="zerocoinMintButton">

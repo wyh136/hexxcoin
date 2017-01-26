@@ -16,6 +16,7 @@ class AddressBookPage;
 class SendCoinsDialog;
 class SignVerifyMessageDialog;
 class RPCConsole;
+class BlockBrowser;
 
 QT_BEGIN_NAMESPACE
 class QLabel;
@@ -61,6 +62,7 @@ private:
     AddressBookPage *addressBookPage;
     AddressBookPage *receiveCoinsPage;
     AddressBookPage *zerocoinPage;
+    BlockBrowser *blockBrowser;
     SendCoinsDialog *sendCoinsPage;
     SignVerifyMessageDialog *signVerifyMessageDialog;
 
@@ -77,6 +79,8 @@ public slots:
     void gotoReceiveCoinsPage();
     /** Switch to zerocoin page */
     void gotoZerocoinPage();
+    /** Switch to browser page */
+    void gotoBrowserPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage(QString addr = "");
 

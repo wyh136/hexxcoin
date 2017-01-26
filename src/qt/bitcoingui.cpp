@@ -25,6 +25,7 @@
 #include "ui_interface.h"
 #include "wallet.h"
 #include "init.h"
+#include "blockbrowser.h"
 
 #ifdef Q_OS_MAC
 #include "macdockiconhandler.h"
@@ -69,7 +70,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     prevBlocks(0)
 {
     restoreWindowGeometry();
-    setWindowTitle(tr("Zcoin") + " - " + tr("Wallet"));
+    setWindowTitle(tr("Hexxcoin") + " - " + tr("Wallet"));
 #ifndef Q_OS_MAC
     QApplication::setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
@@ -176,7 +177,7 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a zcoin address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a Hexxcoin address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
@@ -209,6 +210,13 @@ void BitcoinGUI::createActions()
     addressBookAction->setCheckable(true);
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
     tabGroup->addAction(addressBookAction);
+	
+	browserAction = new QAction(QIcon(":/icons/blockexplorer"), tr("&BlockExplorer"), this);
+    browserAction->setStatusTip(tr("Hexxcoin block explorer"));
+	browserAction->setToolTip(browserAction->statusTip());
+	browserAction->setCheckable(true);
+	browserAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_7));
+	tabGroup->addAction(browserAction);
 
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(gotoOverviewPage()));
@@ -222,19 +230,20 @@ void BitcoinGUI::createActions()
     connect(addressBookAction, SIGNAL(triggered()), this, SLOT(gotoAddressBookPage()));    
     connect(zerocoinAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(zerocoinAction, SIGNAL(triggered()), this, SLOT(gotoZerocoinPage()));
+	connect(browserAction, SIGNAL(triggered()), this, SLOT(gotoBrowserPage()));
 
     quitAction = new QAction(QIcon(":/icons/quit"), tr("E&xit"), this);
     quitAction->setStatusTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About ZCoin"), this);
-    aboutAction->setStatusTip(tr("Show information about ZCoin"));
+    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About Hexxcoin"), this);
+    aboutAction->setStatusTip(tr("Show information about Hexxcoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
-    aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
+    aboutQtAction = new QAction(QIcon(":/icons/qtlogo64"), tr("About &Qt"), this);
     aboutQtAction->setStatusTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setStatusTip(tr("Modify configuration options for ZCoin"));
+    optionsAction->setStatusTip(tr("Modify configuration options for Hexxcoin"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     toggleHideAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
@@ -247,9 +256,9 @@ void BitcoinGUI::createActions()
     changePassphraseAction = new QAction(QIcon(":/icons/key"), tr("&Change Passphrase..."), this);
     changePassphraseAction->setStatusTip(tr("Change the passphrase used for wallet encryption"));
     signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your ZCoin addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your Hexxcoin addresses to prove you own them"));
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified ZCoin addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Hexxcoin addresses"));
 
     openRPCConsoleAction = new QAction(QIcon(":/icons/debugwindow"), tr("&Debug window"), this);
     openRPCConsoleAction->setStatusTip(tr("Open debugging and diagnostic console"));
@@ -308,6 +317,7 @@ void BitcoinGUI::createToolBars()
     toolbar->addAction(zerocoinAction);
     toolbar->addAction(historyAction);
     toolbar->addAction(addressBookAction);
+	toolbar->addAction(browserAction);
 }
 
 void BitcoinGUI::setClientModel(ClientModel *clientModel)
@@ -385,6 +395,7 @@ void BitcoinGUI::setWalletActionsEnabled(bool enabled)
     verifyMessageAction->setEnabled(enabled);
     addressBookAction->setEnabled(enabled);
     zerocoinAction->setEnabled(enabled);
+	browserAction->setEnabled(enabled);
 
 }
 
@@ -393,7 +404,7 @@ void BitcoinGUI::createTrayIcon()
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
 
-    trayIcon->setToolTip(tr("Zcoin client"));
+    trayIcon->setToolTip(tr("Hexxcoin client"));
     trayIcon->setIcon(QIcon(":/icons/toolbar"));
     trayIcon->show();
 #endif
@@ -512,6 +523,11 @@ void BitcoinGUI::gotoZerocoinPage()
     if (walletFrame) walletFrame->gotoZerocoinPage();
 }
 
+void BitcoinGUI::gotoBrowserPage()
+{
+	if (walletFrame) walletFrame->gotoBrowserPage();
+}
+
 void BitcoinGUI::gotoSendCoinsPage(QString addr)
 {
     if (walletFrame) walletFrame->gotoSendCoinsPage(addr);
@@ -539,7 +555,7 @@ void BitcoinGUI::setNumConnections(int count)
     default: icon = ":/icons/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to zcoin network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Hexxcoin network", "", count));
 }
 
 void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
@@ -638,7 +654,7 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
 
 void BitcoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
 {
-    QString strTitle = tr("zcoin"); // default title
+    QString strTitle = tr("Hexxcoin"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -777,7 +793,7 @@ void BitcoinGUI::dropEvent(QDropEvent *event)
         if (nValidUrisFound)
             walletFrame->gotoSendCoinsPage();
         else
-            message(tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid zcoin address or malformed URI parameters."),
+            message(tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Hexxcoin address or malformed URI parameters."),
                       CClientUIInterface::ICON_WARNING);
     }
 
@@ -800,7 +816,7 @@ void BitcoinGUI::handleURI(QString strURI)
 {
     // URI has to be valid
     if (!walletFrame->handleURI(strURI))
-        message(tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid zcoin address or malformed URI parameters."),
+        message(tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Hexxcoin address or malformed URI parameters."),
                   CClientUIInterface::ICON_WARNING);
 }
 

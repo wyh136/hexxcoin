@@ -32,7 +32,7 @@ namespace libzerocoin {
 class CoinSpend {
 public:
 	template<typename Stream>
-    CoinSpend(const Params* p,  Stream& strm):denomination(ZQ_LOVELACE),
+    CoinSpend(const Params* p,  Stream& strm):denomination(zvaluen_1),
 		accumulatorPoK(&p->accumulatorParams),
 		serialNumberSoK(p),
 		commitmentPoK(&p->serialNumberSoKCommitmentGroup, &p->accumulatorParams.accumulatorPoKCommitmentGroup) {

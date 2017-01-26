@@ -15,6 +15,7 @@
 #include "overviewpage.h"
 #include "askpassphrasedialog.h"
 #include "ui_interface.h"
+#include "blockbrowser.h"
 
 #include <QHBoxLayout>
 #include <QVBoxLayout>
@@ -57,6 +58,8 @@ WalletView::WalletView(QWidget *parent, BitcoinGUI *_gui):
 
     zerocoinPage = new AddressBookPage(AddressBookPage::ForEditing, AddressBookPage::ZerocoinTab);
 
+    blockBrowser = new BlockBrowser(gui);
+
     sendCoinsPage = new SendCoinsDialog(gui);
 
     signVerifyMessageDialog = new SignVerifyMessageDialog(gui);
@@ -67,6 +70,7 @@ WalletView::WalletView(QWidget *parent, BitcoinGUI *_gui):
     addWidget(receiveCoinsPage);
     addWidget(sendCoinsPage);
     addWidget(zerocoinPage);
+    addWidget(blockBrowser);
 
     // Clicking on a transaction on the overview page simply sends you to transaction history page
     connect(overviewPage, SIGNAL(transactionClicked(QModelIndex)), this, SLOT(gotoHistoryPage()));
@@ -105,6 +109,7 @@ void WalletView::setClientModel(ClientModel *clientModel)
         addressBookPage->setOptionsModel(clientModel->getOptionsModel());
         receiveCoinsPage->setOptionsModel(clientModel->getOptionsModel());
         zerocoinPage->setOptionsModel(clientModel->getOptionsModel());
+        blockBrowser->setClientModel(clientModel);
     }
 }
 
@@ -183,6 +188,11 @@ void WalletView::gotoZerocoinPage()
     setCurrentWidget(zerocoinPage);
 }
 
+void WalletView::gotoBrowserPage()
+{
+    gui->getBrowserAction()->setChecked(true);
+    setCurrentWidget(blockBrowser);
+}
 
 void WalletView::gotoSendCoinsPage(QString addr)
 {

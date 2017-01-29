@@ -660,7 +660,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         if (nTransactionFee > 0.25 * COIN)
             InitWarning(_("Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction."));
     }
-    bSpendZeroConfChange = GetArg("-spendzeroconfchange", false);
+    bSpendZeroConfChange = GetArg("-spendzeroconfchange", true);
 
     if (mapArgs.count("-mininput"))
     {

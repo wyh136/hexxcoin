@@ -85,7 +85,6 @@ OBJS= \
     obj/checkpoints.o \
     obj/netbase.o \
     obj/addrman.o \
-    obj/auxpow.o \
     obj/crypter.o \
     obj/key.o \
     obj/db.o \
@@ -102,7 +101,6 @@ OBJS= \
     obj/rpcblockchain.o \
     obj/rpcrawtransaction.o \
     obj/script.o \
-    obj/scrypt.o \
     obj/sync.o \
     obj/util.o \
     obj/wallet.o \
@@ -135,7 +133,7 @@ ifndef USE_UPNP
 	override USE_UPNP = -
 endif
 ifneq (${USE_UPNP}, -)
-	DEFS += -DUSE_UPNP=$(USE_UPNP)
+	DEFS += -DSTATICLIB -DMINIUPNP_STATICLIB -DUSE_UPNP=$(USE_UPNP)
 ifdef STATIC
 	LIBS += $(DEPSDIR)/lib/libminiupnpc.a
 else
@@ -147,10 +145,10 @@ ifneq (${USE_IPV6}, -)
 	DEFS += -DUSE_IPV6=$(USE_IPV6)
 endif
 
-all: zcoind
+all: hexxd
 
-test check: test_zcoin FORCE
-	./test_zcoin
+test check: test_hexx FORCE
+	./test_hexx
 
 #
 # LevelDB support
@@ -194,7 +192,7 @@ obj/%.o: %.cpp
 	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	  rm -f $(@:%.o=%.d)
 
-zcoind: $(OBJS:obj/%=obj/%)
+hexxd: $(OBJS:obj/%=obj/%)
 	$(CXX) $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -210,7 +208,7 @@ test_zcoin: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	$(CXX) $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS) $(TESTLIBS)
 
 clean:
-	-rm -f zcoind test_zcoin
+	-rm -f hexxd test_hexx
 	-rm -f obj/*.o
 	-rm -f obj-test/*.o
 	-rm -f obj/*.P

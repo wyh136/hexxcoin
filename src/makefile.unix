@@ -18,8 +18,6 @@ DEFS=-DBOOST_SPIRIT_THREADSAFE -D_FILE_OFFSET_BITS=64
 DEFS += $(addprefix -I,$(CURDIR) $(CURDIR)/obj $(BOOST_INCLUDE_PATH) $(BDB_INCLUDE_PATH) $(OPENSSL_INCLUDE_PATH))
 LIBS = $(addprefix -L,$(BOOST_LIB_PATH) $(BDB_LIB_PATH) $(OPENSSL_LIB_PATH))
 
-TESTDEFS = -DTEST_DATA_DIR=$(abspath test/data)
-
 LMODE = dynamic
 LMODE2 = dynamic
 ifdef STATIC
@@ -27,9 +25,6 @@ ifdef STATIC
 	ifeq (${STATIC}, all)
 		LMODE2 = static
 	endif
-else
-	TESTDEFS += -DBOOST_TEST_DYN_LINK
-endif
 
 # for boost 1.37, add -mt to the boost libraries
 LIBS += \
@@ -42,16 +37,12 @@ LIBS += \
    -l ssl \
    -l crypto
 
-TESTLIBS += \
- -Wl,-B$(LMODE) \
-   -l boost_unit_test_framework$(BOOST_LIB_SUFFIX)
-
 ifndef USE_UPNP
 	override USE_UPNP = -
 endif
 ifneq (${USE_UPNP}, -)
 	LIBS += -l miniupnpc
-	DEFS += -DSTATICLIB -DMINIUPNP_STATICLIB -DUSE_UPNP=$(USE_UPNP))
+	DEFS += -DSTATICLIB -DMINIUPNP_STATICLIB -DUSE_UPNP=$(USE_UPNP)
 endif
 
 ifneq (${USE_IPV6}, -)
@@ -160,17 +151,7 @@ OBJS= \
 
 
 
-
-ifdef USE_SSE2
-DEFS += -DUSE_SSE2
-OBJS_SSE2= obj/scrypt-sse2.o
-OBJS += $(OBJS_SSE2)
-endif
-
 all: hexxd
-
-test check: test_hexx FORCE
-	./test_hexx
 
 #
 # LevelDB support
@@ -184,7 +165,6 @@ leveldb/libleveldb.a:
 
 # auto-generated dependencies:
 -include obj/*.P
--include obj-test/*.P
 
 obj/build.h: FORCE
 	/bin/sh ../share/genbuild.sh obj/build.h
@@ -201,13 +181,6 @@ obj/libzerocoin/%.o: libzerocoin/%.cpp
 obj/%.o: %.c
 	$(CC) -c -O3 -o $@ $<
 
-obj/%-sse2.o: %-sse2.cpp
-	$(CXX) -c $(xCXXFLAGS) -msse2 -MMD -MF $(@:%.o=%.d) -o $@ $<
-	@cp $(@:%.o=%.d) $(@:%.o=%.P); \
-	  sed -e 's/#.*//' -e 's/^[^:]*: *//' -e 's/ *\\$$//' \
-	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
-	  rm -f $(@:%.o=%.d)
-
 obj/%.o: %.cpp
 	$(CXX) -c $(xCXXFLAGS) -MMD -MF $(@:%.o=%.d) -o $@ $<
 	@cp $(@:%.o=%.d) $(@:%.o=%.P); \
@@ -218,25 +191,12 @@ obj/%.o: %.cpp
 hexxd: $(OBJS:obj/%=obj/%)
 	$(LINK) $(xCXXFLAGS) -o $@ $^ $(xLDFLAGS) $(LIBS)
 
-TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
-
-obj-test/%.o: test/%.cpp
-	$(CXX) -c $(TESTDEFS) $(xCXXFLAGS) -MMD -MF $(@:%.o=%.d) -o $@ $<
-	@cp $(@:%.o=%.d) $(@:%.o=%.P); \
-	  sed -e 's/#.*//' -e 's/^[^:]*: *//' -e 's/ *\\$$//' \
-	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
-	  rm -f $(@:%.o=%.d)
-
-test_hexx: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
-	$(LINK) $(xCXXFLAGS) -o $@ $(LIBPATHS) $^ $(TESTLIBS) $(xLDFLAGS) $(LIBS)
-
 clean:
-	-rm -f hexxd test_hexx
+	-rm -f hexxd
 	-rm -f obj/*.o
-	-rm -f obj-test/*.o
 	-rm -f obj/*.P
-	-rm -f obj-test/*.P
 	-rm -f obj/build.h
 	-cd leveldb && $(MAKE) clean || true
+
 
 FORCE:

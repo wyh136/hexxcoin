@@ -54,8 +54,13 @@ win32:QMAKE_LFLAGS *= -static-libgcc -static-libstdc++
 
 # use: qmake "USE_QRCODE=1"
 # libqrencode (http://fukuchi.org/works/qrencode/index.en.html) must be installed for support
-contains(USE_QRCODE, 1) {
-    message(Building with QRCode support)
+contains(USE_QRCODE, -) {
+    message(Building without QRCODE support)
+} else {
+    message(Building with QRCODE support)
+    count(USE_QRCODE, 0) {
+        USE_QRCODE=1
+    }
     DEFINES += USE_QRCODE
     LIBS += -lqrencode
 }
@@ -71,7 +76,7 @@ contains(USE_UPNP, -) {
     count(USE_UPNP, 0) {
         USE_UPNP=1
     }
-    DEFINES += USE_UPNP=$$USE_UPNP STATICLIB
+    DEFINES += USE_UPNP=$$USE_UPNP MINIUPNP_STATICLIB STATICLIB
     INCLUDEPATH += $$MINIUPNPC_INCLUDE_PATH
     LIBS += $$join(MINIUPNPC_LIB_PATH,,-L,) -lminiupnpc
     win32:LIBS += -liphlpapi
@@ -88,8 +93,9 @@ contains(USE_DBUS, 1) {
 #  or: qmake "USE_IPV6=0" (disabled by default)
 #  or: qmake "USE_IPV6=-" (not supported)
 contains(USE_IPV6, -) {
-    message(Building without IPv6 support)
+    message(Building without IPV6 support)
 } else {
+    message(Building with IPV6 support)
     count(USE_IPV6, 0) {
         USE_IPV6=1
     }
@@ -339,26 +345,6 @@ SOURCES += src/qt/qrcodedialog.cpp
 FORMS += src/qt/forms/qrcodedialog.ui
 }
 
-contains(BITCOIN_QT_TEST, 1) {
-SOURCES += src/qt/test/test_main.cpp \
-    src/qt/test/uritests.cpp
-HEADERS += src/qt/test/uritests.h
-DEPENDPATH += src/qt/test
-QT += testlib
-TARGET = Hexxcoin-qt_test
-DEFINES += BITCOIN_QT_TEST
-  macx: CONFIG -= app_bundle
-}
-
-contains(USE_SSE2, 1) {
-DEFINES += USE_SSE2
-gccsse2.input  = SOURCES_SSE2
-gccsse2.output = \"$$PWD\"/build/${QMAKE_FILE_BASE}.o
-gccsse2.commands = $(CXX) -c $(CXXFLAGS) $(INCPATH) -o ${QMAKE_FILE_OUT} ${QMAKE_FILE_NAME} -msse2 -mstackrealign
-QMAKE_EXTRA_COMPILERS += gccsse2
-SOURCES_SSE2 += src/scrypt-sse2.cpp
-}
-
 # Todo: Remove this line when switching to Qt5, as that option was removed
 CODECFORTR = UTF-8
 
@@ -385,10 +371,8 @@ OTHER_FILES += README.md \
     doc/*.txt \
     doc/*.md \
     src/qt/res/bitcoin-qt.rc \
-    src/test/*.cpp \
-    src/test/*.h \
-    src/qt/test/*.cpp \
-    src/qt/test/*.h
+    src/makefile.* \
+    src/qt/bitcoin.qrc \
 
 # platform specific defaults, if not overridden on command line
 isEmpty(BOOST_LIB_SUFFIX) {

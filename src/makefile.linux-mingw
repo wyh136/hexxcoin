@@ -141,6 +141,7 @@ clean:
 	-rm -f obj/*.o
 	-rm -f hexxd.exe
 	-rm -f obj-test/*.o
+	-rm -f test_hexx.exe
 	-rm -f obj/build.h
 	cd leveldb && TARGET_OS=OS_WINDOWS_CROSSCOMPILE $(MAKE) clean && cd ..
 

@@ -5,7 +5,7 @@ This product includes software developed by the OpenSSL Project for use in the [
 cryptographic software written by Eric Young ([eay@cryptsoft.com](mailto:eay@cryptsoft.com)), and UPnP software written by Thomas Bernard.
 
 
-See readme-qt.rst for instructions on building zcoin, the
+See readme-qt.rst for instructions on building Hexxcoin, the
 graphical user interface.
 
 WINDOWS BUILD NOTES
@@ -80,10 +80,10 @@ MSYS shell:
 	mkdir miniupnpc
 	cp *.h miniupnpc/
 
-zcoin
+hexx
 -------
 MSYS shell:
 
-        cd \zcoin\src
+        cd \hexx\src
 	mingw32-make -f makefile.mingw
-        strip zcoind.exe
+        strip hexxd.exe

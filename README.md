@@ -79,7 +79,7 @@ Debian/Ubuntu Linux Qt4 Wallet Build Instructions
 update and install dependencies:
 
     $ sudo apt-get update && sudo apt-get upgrade
-    $ sudo apt-get install git build-essential libssl-dev libdb5.3++-dev libminiupnpc-dev libboost-all-dev libqt4-dev
+    $ sudo apt-get install git build-essential libssl-dev libdb5.3++-dev libminiupnpc-dev libboost-all-dev qt4-qmake libqt4-dev
 build Hexxcoin-qt from git:
 
     $ git clone clone https://github.com/hexxcointakeover/hexxcoin
@@ -88,8 +88,22 @@ build Hexxcoin-qt from git:
 running the Hexx Qt wallet:
 
     $ sudo ./hexx
-    
+ 
+ Debian/Ubuntu Linux Qt5 Wallet Build Instructions
+================================================
 
+update and install dependencies:
+
+    $ sudo apt-get update && sudo apt-get upgrade
+    $ sudo apt-get install git build-essential libssl-dev libdb5.3++-dev libminiupnpc-dev libboost-all-dev qt5-qmake libqt5gui5 libqt5core5 libqt5dbus5 qttools5-dev-tools
+build Hexxcoin-qt from git:
+
+    $ git clone clone https://github.com/hexxcointakeover/hexxcoin
+    $ cd hexxcoin && qmake -qt=qt5 "RELEASE=1" Hexxcoin-qt.pro && make
+ 
+running the Hexx Qt wallet:
+
+    $ sudo ./hexx
 
 Example hexx.conf Configuration
 ===================================================

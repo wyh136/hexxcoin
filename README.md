@@ -70,7 +70,6 @@ here are a few commands, google for more.
     $ ./hexxd getinfo
     $ ./hexxd getpeerinfo
     $ ./hexxd getmininginfo
-    $ ./hexxd getstakinginfo
     $ ./hexxd getnewaddresss
 	
 

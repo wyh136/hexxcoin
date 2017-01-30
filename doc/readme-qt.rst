@@ -1,8 +1,6 @@
 Hexxcoin: Qt GUI for Hexxcoin
 ===============================
 
-Modified by Aizen Sou (aizen0sou@gmail.com) @ 2017
-
 Build instructions
 ===================
 

@@ -58,15 +58,16 @@ win32:QMAKE_LFLAGS *= -static-libgcc -static-libstdc++ -pthread
 
 # use: qmake "USE_QRCODE=1"
 # libqrencode (http://fukuchi.org/works/qrencode/index.en.html) must be installed for support
-contains(USE_QRCODE, -) {
-    message(Building without QRCODE support)
-} else {
+contains(USE_QRCODE, 1) {
     message(Building with QRCODE support)
-    count(USE_QRCODE, 0) {
-        USE_QRCODE=1
+    count(USE_QRCODE, 1) {
+    USE_QRCODE=1
     }
     DEFINES += USE_QRCODE
     LIBS += -lqrencode
+
+} else {
+    message(Building without QRCODE support)
 }
 
 # use: qmake "USE_UPNP=1" ( enabled by default; default)
@@ -96,13 +97,11 @@ contains(USE_DBUS, 1) {
 # use: qmake "USE_IPV6=1" ( enabled by default; default)
 #  or: qmake "USE_IPV6=0" (disabled by default)
 #  or: qmake "USE_IPV6=-" (not supported)
-contains(USE_IPV6, -) {
+contains(USE_IPV6, 0) {
     message(Building without IPV6 support)
 } else {
     message(Building with IPV6 support)
-    count(USE_IPV6, 0) {
-        USE_IPV6=1
-    }
+    count(USE_IPV6, 1)
     DEFINES += USE_IPV6=$$USE_IPV6
 }
 

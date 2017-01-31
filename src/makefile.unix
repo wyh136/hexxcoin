@@ -25,6 +25,7 @@ ifdef STATIC
 	ifeq (${STATIC}, all)
 		LMODE2 = static
 	endif
+endif
 
 # for boost 1.37, add -mt to the boost libraries
 LIBS += \

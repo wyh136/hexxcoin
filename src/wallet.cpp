@@ -1424,16 +1424,16 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64> >& vecSend,
 libzerocoin::CoinDenomination ZerocoinAmtToDenom(int amt)
 {
     if (amt == 1)
-        return libzerocoin::zvaluen_1;
+        return libzerocoin::ZQ_LOVELACE;
     if (amt == 10)
-        return libzerocoin::zvaluen_2;
+        return libzerocoin::ZQ_GOLDWASSER;
     if (amt == 100)
-        return libzerocoin::zvaluen_3;
+        return libzerocoin::ZQ_RACKOFF;
     if (amt == 1000)
-        return libzerocoin::zvaluen_4;
+        return libzerocoin::ZQ_PEDERSEN;
     if (amt == 10000)
-        return libzerocoin::zvaluen_5;
-    return libzerocoin::zvaluen_1;
+        return libzerocoin::ZQ_WILLIAMSON;
+    return libzerocoin::ZQ_LOVELACE;
 }
 
 bool CWallet::CreateZerocoinMintModel(int amt, string &stringError){

@@ -17,11 +17,11 @@
 namespace libzerocoin {
 
 enum  CoinDenomination {
-    zvaluen_1 = 1,
-    zvaluen_2 = 10,
-    zvaluen_3 = 100,
-    zvaluen_4 = 1000,
-    zvaluen_5 = 10000
+    ZQ_LOVELACE = 1,
+    ZQ_GOLDWASSER = 10,
+    ZQ_RACKOFF = 100,
+    ZQ_PEDERSEN = 1000,
+    ZQ_WILLIAMSON = 10000
 };
 
 /** A Public coin is the part of a coin that
@@ -43,9 +43,9 @@ public:
 	 *
 	 * @param p cryptographic paramters
 	 * @param coin the value of the commitment.
-     * @param denomination The denomination of the coin. Defaults to zvaluen_1
+     * @param denomination The denomination of the coin. Defaults to ZQ_LOVELACE
 	 */
-    PublicCoin( const Params* p, const Bignum& coin, const CoinDenomination d = zvaluen_1);
+    PublicCoin( const Params* p, const Bignum& coin, const CoinDenomination d = ZQ_LOVELACE);
 	const Bignum& getValue() const;
 	const CoinDenomination getDenomination() const;
 	bool operator==(const PublicCoin& rhs) const;
@@ -86,7 +86,7 @@ public:
 	PrivateCoin(const Params* p, Stream& strm): publicCoin(p),params(p) {
 		strm >> *this;
 	}
-    PrivateCoin(const Params* p,const CoinDenomination denomination = zvaluen_1);
+    PrivateCoin(const Params* p,const CoinDenomination denomination = ZQ_LOVELACE);
 	const PublicCoin& getPublicCoin() const;
 	const Bignum& getSerialNumber() const;
 	const Bignum& getRandomness() const;

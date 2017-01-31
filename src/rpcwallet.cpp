@@ -1635,19 +1635,19 @@ Value mintzerocoin(const Array& params, bool fHelp)
         libzerocoin::CoinDenomination denomination;
         // Amount
         if(params[0].get_real() == 1.0){
-            denomination = libzerocoin::zvaluen_1;
+            denomination = libzerocoin::ZQ_LOVELACE;
             nAmount = AmountFromValue(params[0]);
         }else if(params[0].get_real() == 10.0){
-            denomination = libzerocoin::zvaluen_2;
+            denomination = libzerocoin::ZQ_GOLDWASSER;
             nAmount = AmountFromValue(params[0]);
         }else if(params[0].get_real() == 25.0){
-            denomination = libzerocoin::zvaluen_3;
+            denomination = libzerocoin::ZQ_RACKOFF;
             nAmount = AmountFromValue(params[0]);
         }else if(params[0].get_real() == 50.0){
-            denomination = libzerocoin::zvaluen_4;
+            denomination = libzerocoin::ZQ_PEDERSEN;
             nAmount = AmountFromValue(params[0]);
         }else if(params[0].get_real() == 100.0){
-            denomination = libzerocoin::zvaluen_5;
+            denomination = libzerocoin::ZQ_WILLIAMSON;
             nAmount = AmountFromValue(params[0]);
         }else{
             throw runtime_error(
@@ -1725,19 +1725,19 @@ Value spendzerocoin(const Array& params, bool fHelp)
     libzerocoin::CoinDenomination denomination;
     // Amount
     if(params[0].get_real() == 1.0){
-        denomination = libzerocoin::zvaluen_1;
+        denomination = libzerocoin::ZQ_LOVELACE;
         nAmount = AmountFromValue(params[0]);
     }else if(params[0].get_real() == 10.0){
-        denomination = libzerocoin::zvaluen_2;
+        denomination = libzerocoin::ZQ_GOLDWASSER;
         nAmount = AmountFromValue(params[0]);
     }else if(params[0].get_real() == 100.0){
-        denomination = libzerocoin::zvaluen_3;
+        denomination = libzerocoin::ZQ_RACKOFF;
         nAmount = AmountFromValue(params[0]);
     }else if(params[0].get_real() == 1000.0){
-        denomination = libzerocoin::zvaluen_4;
+        denomination = libzerocoin::ZQ_PEDERSEN;
         nAmount = AmountFromValue(params[0]);
     }else if(params[0].get_real() == 10000.0){
-        denomination = libzerocoin::zvaluen_5;
+        denomination = libzerocoin::ZQ_WILLIAMSON;
         nAmount = AmountFromValue(params[0]);
     }else{
         throw runtime_error(

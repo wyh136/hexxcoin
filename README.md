@@ -108,6 +108,7 @@ running the Hexx Qt wallet:
 Example hexx.conf Configuration
 ===================================================
 
+	addnode=node_ip
 	rpcallowip=127.0.0.1
 	rpcuser=MAKEUPYOUROWNUSERNAME
 	rpcpassword=MAKEUPYOUROWNPASSWORD
@@ -115,5 +116,8 @@ Example hexx.conf Configuration
 	server=1
 	listen=1
 	port=29200
+	
+	
+
 
 

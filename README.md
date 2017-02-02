@@ -62,15 +62,25 @@ build hexxd from git:
    
 install and run hexxd daemon:
 
-    $ sudo strip hexxkd && sudo cp ~/hexxcoin/src/dd /usr/bin && cd ~/
+    $ sudo strip hexkd && sudo cp ~/hexxcoin/src/hexxd /usr/bin && cd ~/
     $ hexxd
 
 here are a few commands, google for more.
 
-    $ ./hexxd getinfo
+./hexxd getinfo
     $ ./hexxd getpeerinfo
     $ ./hexxd getmininginfo
     $ ./hexxd getnewaddresss
+	
+	
+if you need a swap memory
+
+    $ free
+    $ dd if=/dev/zero of=/var/swap.img bs=1024k count=1000
+    $ mkswap /var/swap.img
+    $ swapon /var/swap.img	
+    $ free	
+	
 	
 
 Debian/Ubuntu Linux Qt4 Wallet Build Instructions

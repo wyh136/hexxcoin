@@ -67,7 +67,7 @@ install and run hexxd daemon:
 
 here are a few commands, google for more.
 
-    $ ../hexxd getinfo
+    $ ./hexxd getinfo
     $ ./hexxd getpeerinfo
     $ ./hexxd getmininginfo
     $ ./hexxd getnewaddresss

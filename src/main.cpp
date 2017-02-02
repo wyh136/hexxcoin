@@ -684,7 +684,7 @@ bool CTransaction::CheckTransaction(CValidationState &state, uint256 hashTx, boo
                     return state.DoS(100, error("CTransaction::CheckTransaction() : txout.nValue is not correct"));
                 }
 
-                if (!isVerifyDB) {                    
+                if (!isVerifyDB) {
 
                     // Check the pubCoinValue didn't already store in the wallet
                     CZerocoinEntry pubCoinTx;

@@ -62,12 +62,12 @@ build hexxd from git:
    
 install and run hexxd daemon:
 
-    $ sudo strip hexkd && sudo cp ~/hexxcoin/src/hexxd /usr/bin && cd ~/
+    $ sudo strip hexxd && sudo cp ~/hexxcoin/src/hexxd /usr/bin && cd ~/
     $ hexxd
 
 here are a few commands, google for more.
 
-./hexxd getinfo
+    $ ../hexxd getinfo
     $ ./hexxd getpeerinfo
     $ ./hexxd getmininginfo
     $ ./hexxd getnewaddresss

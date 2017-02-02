@@ -1640,13 +1640,13 @@ Value mintzerocoin(const Array& params, bool fHelp)
         }else if(params[0].get_real() == 10.0){
             denomination = libzerocoin::ZQ_GOLDWASSER;
             nAmount = AmountFromValue(params[0]);
-        }else if(params[0].get_real() == 25.0){
+        }else if(params[0].get_real() == 100.0){
             denomination = libzerocoin::ZQ_RACKOFF;
             nAmount = AmountFromValue(params[0]);
-        }else if(params[0].get_real() == 50.0){
+        }else if(params[0].get_real() == 1000.0){
             denomination = libzerocoin::ZQ_PEDERSEN;
             nAmount = AmountFromValue(params[0]);
-        }else if(params[0].get_real() == 100.0){
+        }else if(params[0].get_real() == 10000.0){
             denomination = libzerocoin::ZQ_WILLIAMSON;
             nAmount = AmountFromValue(params[0]);
         }else{

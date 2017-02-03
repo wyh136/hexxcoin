@@ -7,10 +7,7 @@
 #include "walletmodel.h"
 #include "wallet.h"
 #include "base58.h"
-#include "bitcoinunits.h"
 #include <QFont>
-#include <QInputDialog>
-#include <string>
 
 const QString AddressTableModel::Send = "S";
 const QString AddressTableModel::Receive = "R";
@@ -81,21 +78,18 @@ public:
             CWalletDB(wallet->strWalletFile).ListPubCoin(listPubcoin);
             BOOST_FOREACH(const CZerocoinEntry& item, listPubcoin)
             {
-                if(item.randomness != 0 && item.serialNumber != 0)
-                {
+                if(item.randomness != 0 && item.serialNumber != 0){
                     const std::string& pubCoin = item.value.GetHex();
                     const std::string& isUsed = item.IsUsed ? "Used" : "New";
-                    QString amts = QString::number(item.denomination);
-                    QString info1 = QString::fromStdString(isUsed) + " " + amts;
                     cachedAddressTable.append(AddressTableEntry(AddressTableEntry::Zerocoin,
-                                      info1,
+                                      QString::fromStdString(isUsed),
                                       QString::fromStdString(pubCoin)));
                 }
 
             }
 
-}
-        // qLowerBound() and qUpperBound() require our cachedAddressTable list to be sorted in asc order
+        }
+// qLowerBound() and qUpperBound() require our cachedAddressTable list to be sorted in asc order
         qSort(cachedAddressTable.begin(), cachedAddressTable.end(), AddressTableEntryLessThan());
     }
 
@@ -497,49 +491,19 @@ void AddressTableModel::emitDataChanged(int idx)
     emit dataChanged(index(idx, 0, QModelIndex()), index(idx, columns.length()-1, QModelIndex()));
 }
 
-int AddressTableModel::InputZeroCoinAmount(QWidget* parent)
+bool AddressTableModel::zerocoinMint(string &stringError)
 {
-    QStringList items;
-    items << tr("1") << tr("10") << tr("100") << tr("1000") << tr("10000");
-
-    bool ok;
-    QString item = QInputDialog::getItem(parent,
-        tr("Choose amount"), tr("Amount:"),
-        items, 0, false, &ok);
-
-    if (!ok)
-        return 0;
-    if (item.isEmpty())
-        return 0;
-
-    int val = item.toInt(&ok, 10);
-    if (!ok)
-        return 0;
-
-    return val;
-}
-
-bool AddressTableModel::zerocoinMint(QWidget* parent, string &stringError)
-{
-    int amt = InputZeroCoinAmount(parent);
-    if (amt <= 0)
-        return false;
-
     WalletModel::UnlockContext ctx(walletModel->requestUnlock());
     if(!ctx.isValid())
     {
         // Unlock wallet failed or was cancelled
         return false;
     }
-    return wallet->CreateZerocoinMintModel(amt, stringError);
+    return wallet->CreateZerocoinMintModel(stringError);
 }
 
-bool AddressTableModel::zerocoinSpend(QWidget* parent, string &stringError)
+bool AddressTableModel::zerocoinSpend(string &stringError)
 {
-    int amt = InputZeroCoinAmount(parent);
-    if (amt <= 0)
-        return false;
-
     WalletModel::UnlockContext ctx(walletModel->requestUnlock());
     if(!ctx.isValid())
     {
@@ -547,5 +511,5 @@ bool AddressTableModel::zerocoinSpend(QWidget* parent, string &stringError)
         return false;
     }
 
-    return wallet->CreateZerocoinSpendModel(amt, stringError);
+    return wallet->CreateZerocoinSpendModel(stringError);
 }

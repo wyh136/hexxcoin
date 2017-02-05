@@ -1628,7 +1628,7 @@ Value mintzerocoin(const Array& params, bool fHelp)
 
     if (fHelp || params.size() > 1)
         throw runtime_error(
-            "mintzerocoin <amount>(1,10,100,1000,10000)\n"
+            "mintzerocoin <amount>(1,10,100,250,500)\n"
             + HelpRequiringPassphrase());
 
         int64 nAmount = 0;
@@ -1643,15 +1643,15 @@ Value mintzerocoin(const Array& params, bool fHelp)
         }else if(params[0].get_real() == 100.0){
             denomination = libzerocoin::ZQ_RACKOFF;
             nAmount = AmountFromValue(params[0]);
-        }else if(params[0].get_real() == 1000.0){
+        }else if(params[0].get_real() == 250.0){
             denomination = libzerocoin::ZQ_PEDERSEN;
             nAmount = AmountFromValue(params[0]);
-        }else if(params[0].get_real() == 10000.0){
+        }else if(params[0].get_real() == 500.0){
             denomination = libzerocoin::ZQ_WILLIAMSON;
             nAmount = AmountFromValue(params[0]);
         }else{
             throw runtime_error(
-                "mintzerocoin <amount>(1,10,100,1000,10000)\n");
+                "mintzerocoin <amount>(1,10,100,250,500)\n");
         }
 
 
@@ -1717,7 +1717,7 @@ Value spendzerocoin(const Array& params, bool fHelp)
 
     if (fHelp || params.size() > 1)
         throw runtime_error(
-            "spendzerocoin <amount>(1,10,100,1000,10000)\n"
+            "spendzerocoin <amount>(1,10,100,250,500)\n"
             + HelpRequiringPassphrase());
 
 
@@ -1733,15 +1733,15 @@ Value spendzerocoin(const Array& params, bool fHelp)
     }else if(params[0].get_real() == 100.0){
         denomination = libzerocoin::ZQ_RACKOFF;
         nAmount = AmountFromValue(params[0]);
-    }else if(params[0].get_real() == 1000.0){
+    }else if(params[0].get_real() == 250.0){
         denomination = libzerocoin::ZQ_PEDERSEN;
         nAmount = AmountFromValue(params[0]);
-    }else if(params[0].get_real() == 10000.0){
+    }else if(params[0].get_real() == 500.0){
         denomination = libzerocoin::ZQ_WILLIAMSON;
         nAmount = AmountFromValue(params[0]);
     }else{
         throw runtime_error(
-            "spendzerocoin <amount>(1,10,100,1000,10000)\n");
+            "spendzerocoin <amount>(1,10,100,250,500)\n");
     }
 
 
@@ -1837,3 +1837,4 @@ Value removetxwallet(const Array& params, bool fHelp)
 
     return Value::null;
 }
+

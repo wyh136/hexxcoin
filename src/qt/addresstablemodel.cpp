@@ -3,10 +3,13 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "addresstablemodel.h"
+
 #include "guiutil.h"
 #include "walletmodel.h"
+
 #include "wallet.h"
 #include "base58.h"
+
 #include <QFont>
 
 const QString AddressTableModel::Send = "S";
@@ -89,7 +92,7 @@ public:
             }
 
         }
-// qLowerBound() and qUpperBound() require our cachedAddressTable list to be sorted in asc order
+        // qLowerBound() and qUpperBound() require our cachedAddressTable list to be sorted in asc order
         qSort(cachedAddressTable.begin(), cachedAddressTable.end(), AddressTableEntryLessThan());
     }
 
@@ -425,7 +428,7 @@ QString AddressTableModel::addRow(const QString &type, const QString &label, con
             return QString();
         }
         strAddress = CBitcoinAddress(newKey.GetID()).ToString();
-    }    
+    }
     else
     {
         return QString();
@@ -491,7 +494,7 @@ void AddressTableModel::emitDataChanged(int idx)
     emit dataChanged(index(idx, 0, QModelIndex()), index(idx, columns.length()-1, QModelIndex()));
 }
 
-bool AddressTableModel::zerocoinMint(string &stringError)
+bool AddressTableModel::zerocoinMint(string &stringError, string denomAmount)
 {
     WalletModel::UnlockContext ctx(walletModel->requestUnlock());
     if(!ctx.isValid())
@@ -499,10 +502,10 @@ bool AddressTableModel::zerocoinMint(string &stringError)
         // Unlock wallet failed or was cancelled
         return false;
     }
-    return wallet->CreateZerocoinMintModel(stringError);
+    return wallet->CreateZerocoinMintModel(stringError, denomAmount);
 }
 
-bool AddressTableModel::zerocoinSpend(string &stringError)
+bool AddressTableModel::zerocoinSpend(string &stringError, string denomAmount)
 {
     WalletModel::UnlockContext ctx(walletModel->requestUnlock());
     if(!ctx.isValid())
@@ -511,5 +514,5 @@ bool AddressTableModel::zerocoinSpend(string &stringError)
         return false;
     }
 
-    return wallet->CreateZerocoinSpendModel(stringError);
+    return wallet->CreateZerocoinSpendModel(stringError, denomAmount);
 }

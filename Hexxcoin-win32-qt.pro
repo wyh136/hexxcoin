@@ -1,7 +1,7 @@
 TEMPLATE = app
 TARGET = hexx
 macx:TARGET = "hexx"
-VERSION = 3.0.0.2
+VERSION = 3.0.0.3
 INCLUDEPATH += src src/json src/qt
 QT += core gui network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets

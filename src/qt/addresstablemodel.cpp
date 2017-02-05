@@ -428,7 +428,7 @@ QString AddressTableModel::addRow(const QString &type, const QString &label, con
             return QString();
         }
         strAddress = CBitcoinAddress(newKey.GetID()).ToString();
-    }
+    }    
     else
     {
         return QString();
@@ -494,7 +494,7 @@ void AddressTableModel::emitDataChanged(int idx)
     emit dataChanged(index(idx, 0, QModelIndex()), index(idx, columns.length()-1, QModelIndex()));
 }
 
-bool AddressTableModel::zerocoinMint(string &stringError, string denomAmount)
+bool AddressTableModel::zerocoinMint(string &stringError)
 {
     WalletModel::UnlockContext ctx(walletModel->requestUnlock());
     if(!ctx.isValid())
@@ -502,10 +502,10 @@ bool AddressTableModel::zerocoinMint(string &stringError, string denomAmount)
         // Unlock wallet failed or was cancelled
         return false;
     }
-    return wallet->CreateZerocoinMintModel(stringError, denomAmount);
+    return wallet->CreateZerocoinMintModel(stringError);
 }
 
-bool AddressTableModel::zerocoinSpend(string &stringError, string denomAmount)
+bool AddressTableModel::zerocoinSpend(string &stringError)
 {
     WalletModel::UnlockContext ctx(walletModel->requestUnlock());
     if(!ctx.isValid())
@@ -514,5 +514,6 @@ bool AddressTableModel::zerocoinSpend(string &stringError, string denomAmount)
         return false;
     }
 
-    return wallet->CreateZerocoinSpendModel(stringError, denomAmount);
+    return wallet->CreateZerocoinSpendModel(stringError);
 }
+

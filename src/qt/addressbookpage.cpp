@@ -21,7 +21,6 @@
 #include <QMessageBox>
 #include <QMenu>
 
-
 AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::AddressBookPage),
@@ -63,7 +62,6 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
         ui->labelExplanation->setText(tr("These are your Hexxcoin addresses for sending payments. Always check the amount and the receiving address before sending coins."));
         ui->deleteAddress->setVisible(true);
         ui->signMessage->setVisible(false);
-        ui->zerocoinAmount->setVisible(false);
         ui->zerocoinMintButton->setVisible(false);
         ui->zerocoinSpendButton->setVisible(false);
         break;
@@ -71,7 +69,6 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
         ui->labelExplanation->setText(tr("These are your Hexxcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you."));
         ui->deleteAddress->setVisible(false);
         ui->signMessage->setVisible(true);
-        ui->zerocoinAmount->setVisible(false);
         ui->zerocoinMintButton->setVisible(false);
         ui->zerocoinSpendButton->setVisible(false);
         break;
@@ -82,14 +79,9 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
         ui->newAddress->setVisible(false);
         ui->copyAddress->setVisible(false);
         ui->verifyMessage->setVisible(false);
-        ui->zerocoinAmount->setVisible(true);
         ui->zerocoinMintButton->setVisible(true);
         ui->zerocoinSpendButton->setVisible(true);
-        ui->zerocoinAmount->addItem("1");
-        ui->zerocoinAmount->addItem("10");
-        ui->zerocoinAmount->addItem("100");
-        ui->zerocoinAmount->addItem("250");
-        ui->zerocoinAmount->addItem("500");
+
 
     }
 
@@ -230,11 +222,11 @@ void AddressBookPage::onEditAction()
     dlg.exec();
 }
 
-void AddressBookPage::on_zerocoinMintButton_clicked() {
-    QString amount = ui->zerocoinAmount->currentText();
-    std::string denomAmount = amount.toStdString();
+void AddressBookPage::on_zerocoinMintButton_clicked()
+{
+
     std::string stringError;
-    if(!model->zerocoinMint(stringError, denomAmount)){
+    if(!model->zerocoinMint(stringError)){
         QString t = tr(stringError.c_str());
 
         QMessageBox::critical(this, tr("Error"),
@@ -244,11 +236,10 @@ void AddressBookPage::on_zerocoinMintButton_clicked() {
 
 }
 
-void AddressBookPage::on_zerocoinSpendButton_clicked() {
-    QString amount = ui->zerocoinAmount->currentText();
-    std::string denomAmount = amount.toStdString();
+void AddressBookPage::on_zerocoinSpendButton_clicked(){
+
     std::string stringError;
-    if(!model->zerocoinSpend(stringError, denomAmount)){
+    if(!model->zerocoinSpend(stringError)){
         QString t = tr(stringError.c_str());
 
         QMessageBox::critical(this, tr("Error"),
@@ -355,7 +346,7 @@ void AddressBookPage::selectionChanged()
             ui->verifyMessage->setVisible(false);
             break;
         case ZerocoinTab:
-            break;
+           break;
         }
         ui->copyAddress->setEnabled(true);
         ui->showQRCode->setEnabled(true);

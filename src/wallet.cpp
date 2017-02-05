@@ -1421,32 +1421,10 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64> >& vecSend,
    return true;
 }
 
-bool CWallet::CreateZerocoinMintModel(string &stringError, string denomAmount){
+bool CWallet::CreateZerocoinMintModel(string &stringError){
 
     if(!fFileBacked)
         return false;
-
-    int64 nAmount = 0;
-    libzerocoin::CoinDenomination denomination;
-    // Amount
-    if(denomAmount == "1"){
-        denomination = libzerocoin::ZQ_LOVELACE;
-        nAmount = roundint64(1 * COIN);
-    }else if(denomAmount == "10"){
-        denomination = libzerocoin::ZQ_GOLDWASSER;
-        nAmount = roundint64(10 * COIN);
-    }else if(denomAmount == "100"){
-        denomination = libzerocoin::ZQ_RACKOFF;
-        nAmount = roundint64(100 * COIN);
-    }else if(denomAmount == "250"){
-        denomination = libzerocoin::ZQ_PEDERSEN;
-        nAmount = roundint64(250 * COIN);
-    }else if(denomAmount == "500"){
-        denomination = libzerocoin::ZQ_WILLIAMSON;
-        nAmount = roundint64(500 * COIN);
-    }else{
-
-    }
 
     // zerocoin init
     CBigNum bnTrustedModulus;
@@ -1461,7 +1439,12 @@ bool CWallet::CreateZerocoinMintModel(string &stringError, string denomAmount){
     // new zerocoin. It stores all the private values inside the
     // PrivateCoin object. This includes the coin secrets, which must be
     // stored in a secure location (wallet) at the client.
+
+    // fix denomination for UI
+    libzerocoin::CoinDenomination denomination = libzerocoin::ZQ_LOVELACE;
+
     libzerocoin::PrivateCoin newCoin(ZCParams, denomination);
+
 
     // Get a copy of the 'public' portion of the coin. You should
     // embed this into a Zerocoin 'MINT' transaction along with a series
@@ -1472,6 +1455,9 @@ bool CWallet::CreateZerocoinMintModel(string &stringError, string denomAmount){
     if(pubCoin.validate())
     {
         CScript scriptSerializedCoin = CScript() << OP_ZEROCOINMINT << pubCoin.getValue().getvch().size() << pubCoin.getValue();
+
+        // Amount fixed value
+        int64 nAmount = roundint64(1 * COIN);
 
          // Wallet comments
         CWalletTx wtx;
@@ -1500,31 +1486,15 @@ bool CWallet::CreateZerocoinMintModel(string &stringError, string denomAmount){
 
 }
 
-bool CWallet::CreateZerocoinSpendModel(string &stringError, string denomAmount){
+bool CWallet::CreateZerocoinSpendModel(string &stringError){
     if(!fFileBacked)
         return false;
 
-    int64 nAmount = 0;
-    libzerocoin::CoinDenomination denomination;
-    // Amount
-    if(denomAmount == "1"){
-        denomination = libzerocoin::ZQ_LOVELACE;
-        nAmount = roundint64(1 * COIN);
-    }else if(denomAmount == "10"){
-        denomination = libzerocoin::ZQ_GOLDWASSER;
-        nAmount = roundint64(10 * COIN);
-    }else if(denomAmount == "100"){
-        denomination = libzerocoin::ZQ_RACKOFF;
-        nAmount = roundint64(100 * COIN);
-    }else if(denomAmount == "250"){
-        denomination = libzerocoin::ZQ_PEDERSEN;
-        nAmount = roundint64(250 * COIN);
-    }else if(denomAmount == "500"){
-        denomination = libzerocoin::ZQ_WILLIAMSON;
-        nAmount = roundint64(500 * COIN);
-    }else{
+    // Amount fixed value
+    int64 nAmount = roundint64(1 * COIN);
 
-    }
+    // fix denomination for UI
+    libzerocoin::CoinDenomination denomination = libzerocoin::ZQ_LOVELACE;
 
     // Wallet comments
     CWalletTx wtx;
